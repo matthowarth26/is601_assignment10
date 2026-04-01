@@ -62,8 +62,9 @@ async def read_root(request: Request):
     Serve the index.html template.
     """
     return templates.TemplateResponse(
-        name="index.html",
-        context={"request": request}
+    name="index.html",
+    request=request,
+    context={}
     )
     # return templates.TemplateResponse("index.html", {"request": request})
 
